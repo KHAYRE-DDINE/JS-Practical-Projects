@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.background {
+    background-color: hsl(0, 0%, 86%);
+    width: 85%;
+    height: 85vh;
+    box-shadow: 1px 6px 21px #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background .calculator {
+    background-color: white;
+    border-radius: 20px 20px 169px;
+    width: 54%;
+    height: 415px;
+    padding: 10px;
+    position: relative;
+}
+
+.background .calculator .info {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 83px;
+    padding: 20px 20px 40px;
+    position: relative;
+}
+
+.background .calculator .info::before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    height: 1px;
+    left: 20px;
+    top: 133px;
+    background-color: #80808052;
+}
+
+.background .calculator svg {
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 50%;
+    padding: 15px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 63px;
+    top: 113px;
+    cursor: pointer;
+}
+
+.background .calculator .info input {
+    border: 1px solid hsl(0, 1%, 44%);
+    border-radius: 5px;
+    margin-right: 20px;
+    padding: 4px 20px;
+    width: 87px;
+    height: 37px;
+    font-size: 32px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+}
+
+.background .calculator .info input.false {
+    border-color: hsl(0, 100%, 67%);
+}
+
+.background .calculator .info label::before {
+    display: block;
+    content: attr(name);
+    color: hsl(0, 1%, 44%);
+    text-transform: capitalize;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.background .calculator .info label.false::before {
+    color: hsl(0, 100%, 67%);
+}
+
+.background .calculator .info label.wrong::after {
+    display: block;
+    content: attr(data-false);
+    font-size: 8px;
+    margin-top: 2px;
+    text-align: start;
+    color: hsl(0, 100%, 67%);
+    font-weight: 800;
+    font-style: italic;
+
+}
+
+.background .calculator .result {
+    margin-left: 21px;
+    margin-bottom: 20px;
+}
+
+.background .calculator .result p {
+    font-size: 60px;
+    margin: 0;
+    color: hsl(0, 0%, 8%);
+}
+
+.background .calculator .result p b {
+    color: hsl(259, 100%, 65%);
+}
+
+
+@media (max-width: 700px) {
+    .background {
+        width: 95%;
+    }
+
+    .background .calculator {
+        width: 80%;
+    }
+
+    .background .calculator .info input {
+        width: 80px;
+        padding: 4px 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    body {
+        margin: 0;
+    }
+
+    .background {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .background .calculator {
+        width: 90%;
+        height: 500px;
+    }
+
+    .background .calculator .info::before {
+        top: 152px;
+    }
+
+    .background .calculator .info {
+        padding: 20px 10px 85px;
+    }
+
+    .background .calculator .info.false label::after {
+        font-size: 7px;
+    }
+
+    .background .calculator .info input {
+        width: 68px;
+        padding: 2px 10px;
+        font-size: 27px;
+    }
+
+    .background .calculator svg {
+        left: 45%;
+        top: 133px;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .background .calculator {
+        width: 77%;
+    }
+
+    .background .calculator .info input {
+        width: 67px;
+    }
+}

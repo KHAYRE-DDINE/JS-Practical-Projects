@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="image/code-solid.svg">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="write-code">
+        <div class="bar">
+            <button class="run"><span>run</span></button>
+        </div>
+        <div class="box" >
+            <div class="head">
+                <span>html</span>
+                <select name="" id="">
+                    <option selected value="html">html</option>
+                    <option value="huml">huml</option>
+                    <option value="pug">pug</option>
+                    <option value="slim">slim</option>
+                    <option value="markdown">markdown</option>
+                </select>
+            </div>
+            <textarea onresize="handleResize()" class="textarea" data-index="one" name="" id="" cols="30" rows="10" class="code"></textarea>
+        </div>
+        <div class="box">
+            <div class="head">
+                <span>css</span>
+                <select name="" id="">
+                    <option selected value="css">css</option>
+                    <option value="sass">sass</option>
+                    <option value="less">less</option>
+                </select>
+            </div>
+            <textarea class="textarea" data-index="two" id="" cols="30" rows="10" class="code"></textarea>
+        </div>
+        <div class="box">
+            <div class="head">
+                <span>javascript</span>
+                <select name="" id="">
+                    <option selected value="js">js</option>
+                    <option value="reactJs">reactJs</option>
+                    <option value="typeScript">typeScript</option>
+                    <option value="babel">babel</option>
+                </select>
+            </div>
+            <textarea onresize="handleResize()" class="textarea" data-index="three" id="" cols="30" rows="10" class="code"></textarea>
+        </div>
+    </div>
+    <iframe id="show-result"></iframe>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

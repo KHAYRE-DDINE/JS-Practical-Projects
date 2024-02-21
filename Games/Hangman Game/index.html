@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg" size="32x32" href="images/HangGame.svg">
+</head>
+
+<body>
+
+    <div class="game">
+        <div class="result">
+            <div class="image">
+                <img src="images/hangman-0.svg" alt="">
+            </div>
+            <h1>hangman game</h1>
+        </div>
+        <div class="the-conjecture">
+            <div class="word">
+            </div>
+            <p class="hint">Hint: <hint> A device used to capture and record images or videos</hint>
+            </p>
+            <div class="incorrect">Incorrect guesses: <b><strong>0</strong> / 6</b></div>
+            <div class="letters">
+                <button>a</button>
+                <button>b</button>
+                <button>c</button>
+                <button>d</button>
+                <button>e</button>
+                <button>f</button>
+                <button>g</button>
+                <button>h</button>
+                <button>i</button>
+                <button>j</button>
+                <button>k</button>
+                <button>l</button>
+                <button>m</button>
+                <button>n</button>
+                <button>o</button>
+                <button>p</button>
+                <button>q</button>
+                <button>r</button>
+                <button>s</button>
+                <button>t</button>
+                <button>u</button>
+                <button>v</button>
+                <button>w</button>
+                <button>x</button>
+                <button>y</button>
+                <button>z</button>
+            </div>
+        </div>
+    </div>
+    <div class="success">
+        <div class="icon">
+            <img src="images/victory.gif" alt="">
+        </div>
+        <h1 class="achievement">congrats!</h1>
+        <p class="found">You found the word : <b></b></p>
+        <button class="again">play again</button>
+    </div>
+    <div class="failed">
+        <div class="icon">
+            <img src="images/lost.gif" alt="">
+        </div>
+        <h1 class="achievement">game over!</h1>
+        <p class="found">The correct word was : <b></b></p>
+        <button class="again">play again</button>
+    </div>
+    <script src="think.json"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=League+Spartan:wght@700&family=Outfit:wght@200;300;400;800&family=Poppins:wght@400;500&family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: #363062;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-page {
+    text-align: center;
+}
+
+
+.title h1 {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 62px;
+    /* width: fit-content; */
+    -webkit-text-fill-color: rgb(54, 48, 98);
+    -webkit-text-stroke: 1px white;
+    animation: title 2s linear infinite;
+    position: relative;
+}
+
+/* .title h1::before {
+    content: attr(data-text);
+    position: absolute;
+    -webkit-text-fill-color: #F99417;
+    top: 0;
+    height: 0;
+    overflow: hidden;
+    animation: title 2s linear infinite;
+} */
+
+@keyframes title {
+    0% {
+        letter-spacing: 0px;
+    }
+
+    50% {
+        letter-spacing: 5px;
+    }
+
+    100% {
+        letter-spacing: 0px;
+    }
+}
+
+.removed {
+    width: fit-content;
+    text-align: center;
+    margin: -3px 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.removed a {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 28px;
+    -webkit-text-fill-color: #ff7800;
+    -webkit-text-stroke: 1px white;
+    cursor: pointer;
+    border-style: double;
+    border-color: #ff7800;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.removed a::before {
+    content: attr(data-hover);
+    font-size: 10px;
+    font-weight: normal;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: thin;
+    position: absolute;
+    background: #c7c2c2bf;
+    border-radius: 7px;
+    top: -18px;
+    padding: 1px 10px;
+    width: max-content;
+    transition: .3s;
+    display: none;
+}
+
+.removed a:hover:before {
+    display: inline-block;
+}
+
+.count {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-bottom: 21px;
+}
+
+.count span {
+    color: wheat;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.count span strong,
+.game .box button {
+    color: #F99417;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, .5fr);
+    grid-template-rows: repeat(3, 140px);
+    grid-gap: 10px;
+}
+
+.game .box {
+    box-shadow: inset 0 0 11px 0px #673AB7;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game .box button {
+    font-size: 123px;
+    border: none;
+    background: none;
+}
+
+.pop-up {
+    margin: auto;
+    position: fixed;
+    background: #3c65d0;
+    width: 421px;
+    left: 32%;
+    top: 126px;
+    height: 397px;
+    border-radius: 21px;
+    padding: 136px 0;
+    display: none;
+}
+
+.pop-up .the-winner {
+    width: 100%;
+    text-transform: capitalize;
+    margin: 20px 0 10px;
+}
+
+.pop-up .the-winner b {
+    color: #F99417;
+}
+
+.pop-up .close {
+    position: absolute;
+    /* background: black; */
+    width: 50px;
+    height: 50px;
+    right: 0;
+    top: 0;
+}
+
+.pop-up .close i {
+    font-size: 30px;
+    margin-top: 8px;
+    color: #F99417;
+    cursor: pointer;
+}
+
+.pop-up .back {
+    background: #0000004a;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.pop-up .congra {
+    color: white;
+    text-transform: capitalize;
+    font-size: 27px;
+}
+
+.pop-up .icon i {
+    font-size: 70px;
+    color: #F99417;
+}

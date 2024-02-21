@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+@media (max-width: 576px) {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+body {
+  background: #2196f3;
+}
+
+.to-do-list {
+  border-bottom: 1px solid #03a9f4;
+  padding: 0 0px 22px;
+  width: 100%;
+}
+
+.to-do-list form.info-task {
+  width: fit-content;
+  padding: 20px;
+  background: #03a9f4;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.to-do-list form .title {
+  margin: 10px auto;
+  width: 100%;
+}
+
+.to-do-list form .title input {
+  padding: 9px;
+  margin: auto;
+  display: block;
+  border: 0;
+  outline: double;
+  outline-color: aliceblue;
+  border-radius: 5px;
+  outline-style: dashed;
+  font-style: italic;
+  color: coral;
+}
+
+.to-do-list form .description {
+  width: 266px;
+  height: 100px;
+  padding: 12px;
+  border: none;
+  color: darkgreen;
+  outline: inset;
+  outline-color: aqua;
+  resize: none;
+}
+
+.to-do-list form button {
+  display: block;
+  width: 100px;
+  margin: auto;
+  margin-top: 15px;
+  border: none;
+  padding: 8px;
+  color: #a88f8f;
+  background: cyan;
+  border-radius: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.to-do-list form button:active {
+  transform: scale(1.05);
+}
+
+/* TASKS */
+
+.tasks {
+  display: flex;
+  /* flex: 6; */
+  flex-wrap: wrap;
+  padding: 0 30px;
+  justify-content: space-around;
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  top: 300px;
+  overflow: hidden;
+}
+
+.tasks .close {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  color: #00fff3;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 23px;
+  background: white;
+  border-radius: 65%;
+  border: 2px solid;
+}
+
+.tasks .close:active {
+  font-size: 27px;
+}
+
+.no-task {
+  position: absolute;
+  background: #1280d88f;
+  width: 100%;
+  display: block;
+  /* left: auto; */
+  margin-top: 70px;
+  transform: translateY(-50%);
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.tasks .task {
+  width: 300px;
+  height: 389px;
+  padding: 179px 7px 7px;
+  border: 5px solid aquamarine;
+  position: relative;
+  background: #70bafad1;
+  border-radius: 13px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.tasks .task .image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 160px;
+  width: 100%;
+}
+
+.tasks .task .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.tasks .task .h2 {
+  height: 59px;
+  line-height: 59px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.tasks .task .title {
+  color: #ccc;
+  font-style: oblique;
+  margin-bottom: 11px;
+}
+
+.tasks .task .description {
+  letter-spacing: 1.2px;
+  font-size: 14px;
+  padding: 15px;
+  color: #6a604d;
+  height: 89px;
+  overflow-y: scroll;
+}
+
+.tasks .task .description::-webkit-scrollbar {
+  background-color: #54a1ea;
+  width: 6px;
+}
+
+.tasks .task .description::-webkit-scrollbar-thumb {
+  background-color: #009688c4;
+}
+
+.tasks .finiched {
+  border: none;
+  padding: 8px 17px;
+  border-radius: 7px;
+  background: linear-gradient(45deg, #1ea6c2 25%, #21e9f3 66%, #37c6d8 25%);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tasks .finiched:active {
+  transform: scale(1.05);
+}
+
+.tasks .logo {
+  background: red;
+  color: #ffffffc9;
+  padding: 3px 8px;
+  /* transform: rotate(-45deg); */
+  position: absolute;
+  left: -21px;
+  top: 59px;
+  z-index: 2;
+  width: 115%;
+  display: none;
+}
+
+.tasks .logo::before {
+  content: "";
+  border-color: transparent red transparent transparent;
+  border-width: 12px;
+  border-style: dashed;
+  position: absolute;
+  left: 4px;
+  transform: rotate(137deg);
+  top: 12px;
+}
+
+.tasks .logo::after {
+  content: "";
+  border-color: transparent transparent transparent red;
+  border-width: 12px;
+  border-style: dashed;
+  position: absolute;
+  right: 5px;
+  transform: rotate(226deg);
+  top: 11px;
+}

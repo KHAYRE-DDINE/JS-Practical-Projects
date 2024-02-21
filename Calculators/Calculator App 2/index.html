@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="calculator">
+    <div class="head">
+      <h2 class="logo">calc</h2>
+      <div class="left-side">
+        <label>theme</label>
+        <div class="which">
+          <span data-index="1"></span>
+          <span data-index="2"></span>
+          <span data-index="3"></span>
+        </div>
+      </div>
+    </div>
+    <div class="center">
+      <textarea cols="30" rows="10" disabled></textarea>
+    </div>
+    <div class="bottom">
+      <div class="row">
+        <button data-key="7">7</button>
+        <button data-key="8">8</button>
+        <button data-key="9">9</button>
+        <button data-key="del">del</button>
+      </div>
+      <div class="row">
+        <button data-key="4">4</button>
+        <button data-key="5">5</button>
+        <button data-key="6">6</button>
+        <button data-key="+">+</button>
+      </div>
+      <div class="row">
+        <button data-key="1">1</button>
+        <button data-key="2">2</button>
+        <button data-key="3">3</button>
+        <button data-key="-">-</button>
+      </div>
+      <div class="row">
+        <button data-key=".">.</button>
+        <button data-key="0">0</button>
+        <button data-key="/">/</button>
+        <button data-key="*">x</button>
+      </div>
+      <div class="row">
+        <button data-key="reset">reset</button>
+        <button data-key="=">=</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

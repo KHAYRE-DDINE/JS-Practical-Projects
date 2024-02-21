@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=League+Spartan:wght@700&family=Outfit:wght@200;300;400;800&family=Rubik:ital,wght@0,400;0,500;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-align: border-box;
+    -moz-box-align: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    --background-theme: hsl(222, 26%, 31%);
+    --toggle-theme: hsl(223, 31%, 20%);
+    --screen-theme: hsl(224, 36%, 15%);
+    --text-color-white: hsl(0, 0%, 100%);
+    --text-color-dark: hsl(221, 14%, 31%);
+    --dark-blue: hsl(225, 21%, 49%);
+    --dark-blue-shadow: hsl(224, 28%, 35%);
+    --red: hsl(6, 63%, 50%);
+    --red-shadow: hsl(6, 70%, 34%);
+    --light-grayish: hsl(30, 25%, 89%);
+    --light-grayish-shadow: hsl(28, 16%, 65%);
+}
+
+body {
+    background-color: var(--background-theme);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator {
+    width: 380px;
+    height: 500px;
+}
+
+/******************* HEAD ********************/
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head .logo {
+    color: var(--text-color-white);
+}
+
+.head .left-side {
+    display: flex;
+    align-items: center;
+}
+
+.head .left-side label {
+    text-transform: uppercase;
+    color: var(--text-color-dark);
+    font-size: 10px;
+    margin-right: 11px;
+    letter-spacing: 1px;
+}
+
+.head .left-side .which {
+    width: 59px;
+    height: 20px;
+    border-radius: 113px;
+    background-color: var(--toggle-theme);
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.head .left-side .which::before {
+    content: "1 2 3";
+    position: absolute;
+    color: var(--text-color-white);
+    top: -21px;
+    left: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.head .left-side .which span {
+    background-color: var(--red);
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.head .left-side .which span:not(.which span:first-of-type) {
+    opacity: 0;
+}
+
+/******************* CENTER ********************/
+.center {
+    margin: 17px 0;
+}
+
+.center textarea {
+    color: var(--text-color-white);
+    outline: none;
+    font-size: 32px;
+    background-color: var(--screen-theme);
+    border: none;
+    border-radius: 13px;
+    padding: 20px 24px;
+    resize: none;
+    width: 100%;
+    height: 81px;
+    cursor: text;
+    text-align: right;
+    font-family: 'League Spartan', sans-serif;
+}
+
+/******************* BOTTOM ********************/
+.bottom {
+    background-color: var(--toggle-theme);
+    padding: 12px;
+    border-radius: 13px;
+}
+
+.bottom .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(69px, 1fr));
+    gap: 5px;
+}
+
+.bottom .row:last-of-type {
+    grid-template-columns: repeat(auto-fill, minmax(122px, 1fr));
+}
+
+.bottom .row button {
+    position: relative;
+    color: var(--text-color-dark);
+    background-color: var(--light-grayish);
+    border: none;
+    height: 40px;
+    font-size: 32px;
+    margin: 7px;
+    border-radius: 9px;
+    box-shadow: 0px 2px 1px var(--light-grayish-shadow);
+    font-family: 'League Spartan', sans-serif;
+    padding-top: 7px;
+}
+
+[data-key="*"] {
+    font-size: 1px !important;
+}
+
+[data-key="*"]::before {
+    content: 'x';
+    font-size: 32px;
+    position: absolute;
+    top: 6px;
+    left: 27px;
+}
+
+.bottom .row button:active {
+    transform: scale(1.1);
+}
+
+.bottom .row [data-key="reset"],
+.bottom .row [data-key="del"] {
+    background-color: var(--dark-blue);
+    box-shadow: 0px 2px 1px var(--dark-blue-shadow);
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.bottom .row [data-key="reset"],
+.bottom .row [data-key="del"],
+.bottom .row [data-key="="] {
+    color: var(--text-color-white);
+}
+
+.bottom .row [data-key="="] {
+    background-color: var(--red);
+    box-shadow: 0px 2px 1px var(--red-shadow);
+}

@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 62px;
+    padding-bottom: 36px;
+    background-color: tomato;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.result {
+    margin-bottom: 20px;
+}
+
+.result h1 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.the-conjecture {
+    text-align: center;
+}
+
+.the-conjecture .word {
+    margin-bottom: 49px;
+}
+
+.the-conjecture .word div {
+    width: fit-content;
+    height: 37px;
+
+    margin: auto;
+}
+
+.the-conjecture .word span.below {
+    transform: translateY(10px);
+}
+
+.the-conjecture .word span {
+    font-weight: bold;
+    font-size: 0;
+    margin-left: 8px;
+    display: inline-block;
+    text-transform: uppercase;
+    color: white;
+    transition: .3s;
+    background-color: #595656;
+    border-radius: 10px;
+    border-bottom: 3px solid;
+    width: 35px;
+    height: 23px;
+    line-height: 23px;
+    transition: .3s;
+}
+
+.the-conjecture .hint {
+    margin: 15px 0;
+    font-weight: 700;
+    text-align: start;
+    width: 550px;
+    height: 55px;
+    line-height: 1.6;
+}
+
+.the-conjecture .hint hint {
+    font-weight: normal;
+    font-family: cursive;
+}
+
+.the-conjecture .incorrect {
+    margin: 15px 0 49px;
+    font-weight: 700;
+}
+
+.the-conjecture .incorrect b {
+    color: rgb(231, 12, 12);
+}
+
+.the-conjecture .letters {
+    width: 500px;
+    text-align: center;
+}
+
+.the-conjecture .letters button.clicked {
+    background-color: #c5bbbb;
+    pointer-events: none;
+}
+
+.the-conjecture .letters button {
+    width: 40px;
+    height: 32px;
+    border: none;
+    border-radius: 7px;
+    margin: 4px 3px;
+    background-color: #fb8500;
+    color: rgb(255 255 255);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+.the-conjecture .letters button:hover,
+.again:hover {
+    transform: scale(.9);
+}
+
+.success,
+.failed {
+    position: absolute;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    height: 294px;
+    width: 351px;
+}
+
+.success::before,
+.failed::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000082;
+}
+
+.failed,
+.success {
+    display: none;
+}
+
+.icon {
+    width: 90px;
+    height: 90px;
+    margin: 20px auto;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.achievement {
+    text-transform: capitalize;
+    color: #FF5722;
+    margin: 20px;
+}
+
+.found {
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.found b {
+    color: #20629c;
+    text-transform: capitalize;
+}
+
+.again {
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    background: #FF5722;
+    color: hsl(0deg 0% 100% / 88%);
+    text-transform: capitalize;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (min-width : 814px) {
+    body {
+        padding: 0;
+    }
+
+    .the-conjecture .letters button {
+        width: 45px;
+        height: 38px;
+        border: none;
+        border-radius: 7px;
+        margin: 4px 3px;
+        background-color: #fb8500;
+        color: rgb(255 255 255);
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 16px;
+    }
+}
+
+@media (max-width : 560px) {
+    .the-conjecture {
+        padding: 0 15px;
+    }
+
+    .the-conjecture .word span {
+        width: 26px;
+    }
+
+    .the-conjecture :is(.hint, .letters) {
+        width: 90%;
+    }
+}
