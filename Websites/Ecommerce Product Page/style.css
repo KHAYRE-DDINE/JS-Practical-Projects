@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 0 46px;
+}
+
+.nav,
+.nav .left,
+.nav .right,
+.nav .left .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    padding: 22px 0;
+}
+
+.nav .left {}
+
+.nav .left .menu,
+.nav .left .close {
+    display: none;
+}
+
+.nav .left .logo {
+    cursor: pointer;
+}
+
+.nav .left .list {
+    width: 370px;
+    margin-left: 100px;
+}
+
+.nav .left .list li {
+    list-style: none;
+    text-transform: capitalize;
+    color: hsl(219, 9%, 45%);
+    cursor: pointer;
+}
+
+.nav .left .list li:hover {
+    transform: scale(1.1);
+}
+
+.nav .right {}
+
+.nav .right .card {}
+
+.nav .right .checkbox {
+    position: absolute;
+    box-shadow: 0px 19px 20px #ccc,
+        -4px 9px 9px #ccc;
+    right: 38px;
+    top: 77px;
+    padding: 20px 0;
+    min-height: 221px;
+    max-height: fit-content;
+    width: 365px;
+    background: white;
+    border-radius: 10px;
+    display: none;
+}
+
+.nav .right .checkbox.show {
+    display: block;
+}
+
+.nav .right .checkbox .h3 {
+    border-bottom: 1px solid hsl(223, 64%, 98%);
+    padding-bottom: 16px;
+    text-transform: capitalize;
+    padding: 0 20px 16px;
+}
+
+.nav .right .checkbox .ords {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+    position: relative;
+    top: 6px;
+}
+
+.nav .right .checkbox .ords>p {
+    color: hsl(220, 14%, 75%);
+    margin-top: 51px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.nav .right .checkbox .ords .ord {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 95%;
+    position: relative;
+    top: 6px;
+    margin-bottom: 80px;
+}
+
+.nav .right .checkbox .ords .ord img {
+    margin-left: 0px;
+    border-radius: 7px;
+}
+
+.nav .right .checkbox .ords .ord .info h3,
+.nav .right .checkbox .ords .ord .info span {
+    color: hsl(220, 14%, 75%);
+    display: flex;
+    margin: 4px 10px;
+    font-weight: 400
+}
+
+.nav .right .checkbox .ords .ord .info span p {
+    margin: 0 2px 0 0;
+}
+
+.nav .right .checkbox .ords .ord .info span b {
+    color: hsl(0, 0%, 0%);
+    margin-left: 7px;
+    font-weight: 700;
+}
+
+.nav .right .checkbox .ords .ord svg {
+    cursor: pointer;
+}
+
+.nav .right .checkbox .ords .ord .btn {
+    position: absolute;
+    bottom: -60px;
+    width: 97% !important;
+}
+
+.nav .right .card svg {
+    cursor: pointer;
+}
+
+.nav .right img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.products .images {
+    width: 401px;
+    height: fit-content;
+    /* overflow: hidden; */
+}
+
+.products .images svg {
+    display: none;
+}
+
+.products .images .show {
+    width: 100%;
+}
+
+.products .images .show img {
+    width: 100%;
+    height: 399px;
+    border-radius: 30px;
+}
+
+.products .images .choose {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.products .images .choose img {
+    border-radius: 20px;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    position: relative;
+}
+
+.products .images .choose .op {
+    position: relative;
+}
+
+.products .images .choose .op:hover::before,
+.products .images .choose .op.active::before {
+    content: "";
+    position: absolute;
+    width: calc(100% - 2px);
+    height: 92%;
+    background-color: hsl(0deg 0% 97.79%);
+    opacity: 75%;
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 18px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.products .active-status {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12%;
+}
+
+.products .active-status .images svg {
+    display: flex;
+}
+
+.products .active-status.clicked {
+    display: flex;
+}
+
+.products .active-status::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: hsl(0deg 0% 0% / 66%);
+    z-index: 50;
+}
+
+.products .active-status .images {
+    z-index: 99;
+    overflow: initial;
+}
+
+.products .active-status .images svg {
+    position: absolute;
+    top: 39%;
+    transform: translateY(-50%);
+    background: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+}
+
+.products .active-status .images svg.pre {
+    left: -22px
+}
+
+.products .active-status .images svg.nex {
+    right: -22px
+}
+
+.products .active-status .images .show img {}
+
+.products .active-status .images .choose img:hover {}
+
+.products .active-status>svg {
+    position: absolute;
+    right: 0;
+    top: -27px;
+    cursor: pointer;
+    z-index: 261;
+}
+
+.products .active-status>svg path {
+    fill: white;
+}
+
+.products .product-info {
+    width: 40%;
+}
+
+.products .product-info span {
+    color: hsl(26, 100%, 55%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 22px 0;
+    display: block;
+}
+
+.products .product-info .title {
+    text-transform: capitalize;
+    font-size: 41px;
+    margin: 25px 0;
+}
+
+.products .product-info .para {
+    color: hsl(219, 9%, 45%);
+    line-height: 25px;
+    width: 427px;
+}
+
+.products .product-info .price {
+    font-weight: 700;
+    font-size: 26px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.products .product-info .price .down {
+    color: hsl(26, 100%, 55%);
+    background-color: hsl(25, 100%, 94%);
+    font-size: 15px;
+    border-radius: 6px;
+    padding: 3px 9px;
+    margin-left: 15px;
+}
+
+.products .product-info .price:after {
+    content: "$250.00";
+    position: absolute;
+    top: 36px;
+    color: hsl(220, 14%, 75%);
+    font-size: 16px;
+    vertical-align: middle;
+    text-decoration: line-through;
+}
+
+.products .product-info .pay {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 55px;
+    width: 427px;
+}
+
+.products .product-info .pay .order {
+    background-color: hsl(223, 64%, 98%);
+    width: 149px;
+    padding: 16px 17px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products .product-info .pay .order svg {
+    cursor: pointer;
+}
+
+.products .product-info .pay .order svg:active {
+    transform: scale(1.1);
+}
+
+.products .product-info .pay .btn,
+.nav .right .checkbox .ords .ord .btn {
+    background-color: hsl(26, 100%, 55%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 10px;
+    width: 265px;
+    padding: 16px 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px
+}
+
+.products .product-info .pay .btn svg {
+    color: hsl(0, 0%, 100%);
+    margin-right: 14px;
+}
+
+.products .product-info .pay .btn svg path {
+    fill: white;
+}
+
+@media (max-width : 700px) {
+    body {
+        padding: 0 0 24px 0;
+    }
+
+    .nav {
+        padding: 22px 19px;
+    }
+
+    .nav .left .list {
+        display: none;
+    }
+
+    .nav .left .menu,
+    .nav .left .close {
+        cursor: pointer;
+        margin-right: 11px;
+        margin-left: 8px;
+        z-index: 44;
+    }
+
+    .nav .left .menu {
+        display: block;
+    }
+
+    .nav .left .close {
+        display: none;
+    }
+
+    .nav .left.showing .menu {
+        display: none;
+    }
+
+    .nav .left.showing .close {
+        display: block;
+    }
+
+    .nav .left .list {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -352px;
+        background: white;
+        height: 100vh;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 252px;
+        z-index: 33;
+        padding-left: 26px;
+        padding-top: 100px;
+        transition: .3s;
+    }
+
+    .nav .left .list.showing {
+        left: -101px;
+    }
+
+    .nav .left .list li {
+        color: hsl(220, 13%, 13%);
+        font-weight: 700;
+        margin-top: 19px;
+        font-size: 17px;
+    }
+
+    .nav .right .checkbox {
+        right: 9px;
+        top: 102px;
+        z-index: 3;
+        min-height: 234px;
+        width: 96%;
+    }
+
+    .products {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .products .images {
+        width: 100%;
+    }
+
+    .products .images svg {
+        display: block;
+        position: absolute;
+        top: 39%;
+        transform: translateY(-50%);
+        background: hsl(0, 0%, 100%);
+        border-radius: 50%;
+        width: 43px;
+        height: 43px;
+        cursor: pointer;
+    }
+
+    .products .images svg:first-of-type {
+        left: 10px;
+    }
+
+    .products .images svg:last-of-type {
+        right: 10px;
+    }
+
+    .products .images .choose {
+        display: none;
+    }
+
+    .products .images .show img {
+        height: 290px;
+        border-radius: 0;
+    }
+
+    .products .product-info {
+        width: 80%;
+    }
+
+    .products .product-info .pay {
+        margin-top: 33px;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .products .product-info .pay .btn {
+        width: 100%;
+    }
+
+    .products .product-info .pay .order {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .products .product-info .price:after {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+    }
+
+}
+
+@media (min-width: 700px) and (max-width: 950px) {
+    body {
+        padding: 0 8px;
+    }
+
+    .nav .left .list {
+        margin-left: 38px;
+    }
+
+    .products {
+        margin-top: 24px;
+    }
+
+    .products .images {
+        width: 355px;
+    }
+
+    .products .images .choose img {
+        width: 83px;
+        height: 78px;
+    }
+
+    .products .product-info .title {
+        font-size: 35px;
+    }
+
+    .products .product-info .para {
+        width: 297px;
+    }
+
+    .products .product-info .pay {
+        width: 265px;
+        flex-direction: column;
+    }
+}
