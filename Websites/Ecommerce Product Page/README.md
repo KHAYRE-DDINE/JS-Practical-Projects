@@ -1,3 +1,6 @@
+Live Demo : https://khayre-ddine.github.io/JS-Practical-Projects/Websites/Ecommerce%20Product%20Page/ 
+
+
 # Frontend Mentor - E-commerce product page
 
 ![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
