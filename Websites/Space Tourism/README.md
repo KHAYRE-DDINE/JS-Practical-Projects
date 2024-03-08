@@ -1,6 +1,6 @@
-Live demo : https://khayre-ddine.github.io/JS-Practical-Projects/Websites/Space%20Tourism/starter-code/
-
 **Space tourism multi-page website**
+
+Live demo : https://khayre-ddine.github.io/JS-Practical-Projects/Websites/Space%20Tourism/starter-code/
 
 In this project, I focused on getting data from a JSON file and showing it 
 without refreshing the page. Besides, I practiced what I learned 
