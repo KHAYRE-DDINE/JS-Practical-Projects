@@ -1823,6 +1823,7 @@ align-items: center; */
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+      z-index: -1;
 }
 
 .latest-post .dottes span {
