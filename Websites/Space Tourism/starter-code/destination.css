@@ -6,10 +6,6 @@ body {
 /****************************/
 /* Header */
 /****************************/
-/* .head .nav::before {
-    width: 417px;
-    left: -49%;
-} */
 
 .head .nav {
     width: 50%;
@@ -18,9 +14,7 @@ body {
 /****************************/
 /* Main Left */
 /****************************/
-.main {
-    /* margin-top: 87px; */
-}
+
 
 .main .left .title {
     font-weight: normal;
