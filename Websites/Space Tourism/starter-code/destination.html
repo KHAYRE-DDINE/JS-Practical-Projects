@@ -1,96 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon-32x32.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Frontend Mentor | Space tourism website</title>
-     <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="destination.css" />
-  </head>
-  <body>
-    <header class="head">
-      <div class="logo">
-        <img src="./assets/favicon-32x32.png" alt />
+  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="destination.css" />
+</head>
+
+<body>
+  <header class="head">
+    <div class="logo">
+      <img src="./assets/favicon-32x32.png" alt />
+    </div>
+    <nav class="nav">
+      <li data-url="index.html" class="list border">
+        <a href="index.html"><b>00</b> home</a>
+      </li>
+      <li data-url="destination.html" class="list">
+        <a href="destination.html"><b>01</b> destination</a>
+      </li>
+      <li data-url="crew.html" class="list">
+        <a href="crew.html"><b>02</b> crew</a>
+      </li>
+      <li data-url="technology.html" class="list">
+        <a href="technology.html"><b>03</b> technology</a>
+      </li>
+    </nav>
+    <div class="click">
+      <span><i class="fa-solid fa-bars fa-2xl"></i></span>
+    </div>
+    <div class="side-bar">
+      <li data-url="index.html" class="list border">
+        <a href="index.html"><b>00</b> home</a>
+      </li>
+      <li data-url="destination.html" class="list">
+        <a href="destination.html"><b>01</b> destination</a>
+      </li>
+      <li data-url="crew.html" class="list">
+        <a href="crew.html"><b>02</b> crew</a>
+      </li>
+      <li data-url="technology.html" class="list">
+        <a href="technology.html"><b>03</b> technology</a>
+      </li>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="left">
+      <h2 class="title"><span>01</span> pick your destination</h2>
+      <div class="image">
+        <img src="./assets/destination/image-moon.png" alt />
       </div>
-      <nav class="nav">
-        <li data-url="index.html" class="list border">
-          <a href="index.html"><b>00</b> home</a>
-        </li>
-        <li data-url="destination-titan.html" class="list">
-          <a href="destination-titan.html"><b>01</b> destination</a>
-        </li>
-        <li data-url="crew-specialist.html" class="list">
-          <a href="crew-specialist.html"><b>02</b> crew</a>
-        </li>
-        <li data-url="technology-vehicle.html" class="list">
-          <a href="technology-vehicle.html"><b>03</b> technology</a>
-        </li>
-      </nav>
-      <div class="click">
-        <span><i class="fa-solid fa-bars fa-2xl"></i></span>
+    </section>
+    <section class="right">
+      <div class="planets">
+        <span data-index="0" class="show">moon</span>
+        <span data-index="1">mars</span>
+        <span data-index="2">europa</span>
+        <span data-index="3">titan</span>
       </div>
-      <div class="side-bar">
-        <li data-url="index.html" class="list border">
-          <a href="index.html"><b>00</b> home</a>
-        </li>
-        <li data-url="destination-titan.html" class="list">
-          <a href="destination-titan.html"><b>01</b> destination</a>
-        </li>
-        <li data-url="crew-specialist.html" class="list">
-          <a href="crew-specialist.html"><b>02</b> crew</a>
-        </li>
-        <li data-url="technology-vehicle.html" class="list">
-          <a href="technology-vehicle.html"><b>03</b> technology</a>
-        </li>
+      <div class="title">
+        <h1 class="h1">mars</h1>
       </div>
-    </header>
+      <div class="para">
+        <small>Don't forget to pack your hiking boots. You'll need them <br>
+          to tackle Olympus Mons, the tallest planetary mountain in <br>
+          our solar system. it's two and a half times the size of <br>
+          Everest!</small>
+      </div>
+      <div class="info">
+        <div class="distance">
+          <section class="street"><small>avg. distance</small><br><span class="dis">225 mil. km</span></section>
+        </div>
+        <div class="date">
+          <section class="month"><small>est. travel time</small><br><span class="trav">9 month</span></section>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <main class="main">
-      <section class="left">
-        <h2 class="title"><span>01</span> pick your destination</h2>
-        <div class="image">
-          <img src="./assets/destination/image-moon.png" alt />
-        </div>
-      </section>
-      <section class="right">
-        <div class="planets">
-          <span data-index="0" class="show">moon</span>
-          <span data-index="1">mars</span>
-          <span data-index="2">europa</span>
-          <span data-index="3">titan</span>
-        </div>
-        <div class="title"><h1 class="h1">mars</h1></div>
-        <div class="para">
-          <small>Don't forget to pack your hiking boots. You'll need them <br>
-            to tackle Olympus Mons, the tallest planetary mountain in <br>
-            our solar system. it's two and a half times the size of <br>
-            Everest!</small>
-        </div>
-        <div class="info">
-          <div class="distance">
-            <section class="street"><small>avg. distance</small><br><span
-                class="dis">225 mil. km</span></section>
-          </div>
-          <div class="date">
-            <section class="month"><small>est. travel time</small><br><span
-                class="trav">9 month</span></section>
-          </div>
-        </div>
-      </section>
-    </main>
+  <script src="script.js"></script>
+</body>
 
-    <script src="script.js"></script>
-  </body>
 </html>
