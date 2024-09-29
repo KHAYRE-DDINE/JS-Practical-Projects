@@ -1,5 +1,5 @@
 body {
-  background-image: url(../starter-code/assets/technology/background-technology-desktop.jpg);
+  background-image: url("../starter-code/assets/technology/background-technology-desktop.jpg");
 }
 
 .head .nav .list:hover,
